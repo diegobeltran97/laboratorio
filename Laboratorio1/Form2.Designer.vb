@@ -45,6 +45,7 @@ Partial Class Form2
         Me.checkSi = New System.Windows.Forms.RadioButton()
         Me.checkNo = New System.Windows.Forms.RadioButton()
         Me.Label9 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
@@ -270,11 +271,21 @@ Partial Class Form2
         Me.Label9.TabIndex = 10
         Me.Label9.Text = "Disponibilidad para Viajar"
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(713, 397)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 3
+        Me.Button1.Text = "Ver Datos"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'Form2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.buttonEnviar)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
@@ -311,4 +322,5 @@ Partial Class Form2
     Friend WithEvents checkSi As RadioButton
     Friend WithEvents checkNo As RadioButton
     Friend WithEvents Label9 As Label
+    Friend WithEvents Button1 As Button
 End Class
