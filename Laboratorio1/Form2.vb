@@ -4,7 +4,8 @@
     Dim edad
     Dim estatura
     Dim peso
-
+    Dim contAs As Integer = 0
+    Dim contAsSelected As Integer = 0
 
     Private Sub buttonEnviar_Click(sender As Object, e As EventArgs) Handles buttonEnviar.Click
 
@@ -19,13 +20,16 @@
         Else
             edad = Integer.Parse(inputEdad.Text)
             estatura = Double.Parse(inputEstatura.Text)
-            peso = Integer.Parse(inputPeso.Text)
+            peso = Double.Parse(inputPeso.Text)
 
             If verificar() Then
                 MsgBox("Datos Correctos")
+                contAsSelected = contAsSelected + 1
+                Form3.lblAsPH.Text = contAsSelected
             End If
 
-            Form3.t_usuarios.Text = "1"
+            contAs = contAs + 1
+            Form3.t_usuarios.Text = contAs
 
         End If
 
@@ -39,12 +43,12 @@
             Return False
         End If
 
-        If estatura >= 1.8 Then
+        If estatura < 1.8 Then
             MsgBox("No cumple con el requisito estatura")
             Return False
         End If
 
-        If peso <= 160 Then
+        If peso > 160 Then
             MsgBox("No cumple con el requisito peso")
             Return False
         End If
@@ -63,5 +67,10 @@
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Me.Hide()
         Form3.Show()
+    End Sub
+
+    Private Sub btnRegresar_Click(sender As Object, e As EventArgs) Handles btnRegresar.Click
+        Me.Hide()
+        Form1.Show()
     End Sub
 End Class

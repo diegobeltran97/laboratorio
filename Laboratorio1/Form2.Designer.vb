@@ -23,29 +23,30 @@ Partial Class Form2
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.checkFemenino = New System.Windows.Forms.RadioButton()
         Me.inputTelefono = New System.Windows.Forms.TextBox()
+        Me.checkMasculino = New System.Windows.Forms.RadioButton()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.inputDireccion = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.inputCedula = New System.Windows.Forms.TextBox()
+        Me.Label7 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.inputNombre = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.checkFemenino = New System.Windows.Forms.RadioButton()
-        Me.checkMasculino = New System.Windows.Forms.RadioButton()
+        Me.checkSi = New System.Windows.Forms.RadioButton()
+        Me.checkNo = New System.Windows.Forms.RadioButton()
+        Me.Label9 = New System.Windows.Forms.Label()
         Me.inputPeso = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.inputEstatura = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
         Me.inputEdad = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.buttonEnviar = New System.Windows.Forms.Button()
-        Me.checkSi = New System.Windows.Forms.RadioButton()
-        Me.checkNo = New System.Windows.Forms.RadioButton()
-        Me.Label9 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnRegresar = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
@@ -70,12 +71,34 @@ Partial Class Form2
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "GroupBox1"
         '
+        'checkFemenino
+        '
+        Me.checkFemenino.AutoSize = True
+        Me.checkFemenino.Location = New System.Drawing.Point(93, 235)
+        Me.checkFemenino.Name = "checkFemenino"
+        Me.checkFemenino.Size = New System.Drawing.Size(71, 17)
+        Me.checkFemenino.TabIndex = 9
+        Me.checkFemenino.TabStop = True
+        Me.checkFemenino.Text = "Femenino"
+        Me.checkFemenino.UseVisualStyleBackColor = True
+        '
         'inputTelefono
         '
         Me.inputTelefono.Location = New System.Drawing.Point(93, 169)
         Me.inputTelefono.Name = "inputTelefono"
         Me.inputTelefono.Size = New System.Drawing.Size(100, 20)
         Me.inputTelefono.TabIndex = 7
+        '
+        'checkMasculino
+        '
+        Me.checkMasculino.AutoSize = True
+        Me.checkMasculino.Location = New System.Drawing.Point(93, 213)
+        Me.checkMasculino.Name = "checkMasculino"
+        Me.checkMasculino.Size = New System.Drawing.Size(73, 17)
+        Me.checkMasculino.TabIndex = 8
+        Me.checkMasculino.TabStop = True
+        Me.checkMasculino.Text = "Masculino"
+        Me.checkMasculino.UseVisualStyleBackColor = True
         '
         'Label4
         '
@@ -108,6 +131,15 @@ Partial Class Form2
         Me.inputCedula.Name = "inputCedula"
         Me.inputCedula.Size = New System.Drawing.Size(100, 20)
         Me.inputCedula.TabIndex = 3
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(19, 213)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(31, 13)
+        Me.Label7.TabIndex = 2
+        Me.Label7.Text = "Sexo"
         '
         'Label2
         '
@@ -152,27 +184,36 @@ Partial Class Form2
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "GroupBox2"
         '
-        'checkFemenino
+        'checkSi
         '
-        Me.checkFemenino.AutoSize = True
-        Me.checkFemenino.Location = New System.Drawing.Point(93, 235)
-        Me.checkFemenino.Name = "checkFemenino"
-        Me.checkFemenino.Size = New System.Drawing.Size(71, 17)
-        Me.checkFemenino.TabIndex = 9
-        Me.checkFemenino.TabStop = True
-        Me.checkFemenino.Text = "Femenino"
-        Me.checkFemenino.UseVisualStyleBackColor = True
+        Me.checkSi.AutoSize = True
+        Me.checkSi.Location = New System.Drawing.Point(93, 209)
+        Me.checkSi.Name = "checkSi"
+        Me.checkSi.Size = New System.Drawing.Size(34, 17)
+        Me.checkSi.TabIndex = 12
+        Me.checkSi.TabStop = True
+        Me.checkSi.Text = "Si"
+        Me.checkSi.UseVisualStyleBackColor = True
         '
-        'checkMasculino
+        'checkNo
         '
-        Me.checkMasculino.AutoSize = True
-        Me.checkMasculino.Location = New System.Drawing.Point(93, 213)
-        Me.checkMasculino.Name = "checkMasculino"
-        Me.checkMasculino.Size = New System.Drawing.Size(73, 17)
-        Me.checkMasculino.TabIndex = 8
-        Me.checkMasculino.TabStop = True
-        Me.checkMasculino.Text = "Masculino"
-        Me.checkMasculino.UseVisualStyleBackColor = True
+        Me.checkNo.AutoSize = True
+        Me.checkNo.Location = New System.Drawing.Point(93, 235)
+        Me.checkNo.Name = "checkNo"
+        Me.checkNo.Size = New System.Drawing.Size(39, 17)
+        Me.checkNo.TabIndex = 11
+        Me.checkNo.TabStop = True
+        Me.checkNo.Text = "No"
+        Me.checkNo.UseVisualStyleBackColor = True
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(19, 186)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(125, 13)
+        Me.Label9.TabIndex = 10
+        Me.Label9.Text = "Disponibilidad para Viajar"
         '
         'inputPeso
         '
@@ -206,15 +247,6 @@ Partial Class Form2
         Me.Label6.TabIndex = 4
         Me.Label6.Text = "Estatura"
         '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(19, 213)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(31, 13)
-        Me.Label7.TabIndex = 2
-        Me.Label7.Text = "Sexo"
-        '
         'inputEdad
         '
         Me.inputEdad.Location = New System.Drawing.Point(93, 40)
@@ -240,37 +272,6 @@ Partial Class Form2
         Me.buttonEnviar.Text = "Enviar"
         Me.buttonEnviar.UseVisualStyleBackColor = True
         '
-        'checkSi
-        '
-        Me.checkSi.AutoSize = True
-        Me.checkSi.Location = New System.Drawing.Point(93, 209)
-        Me.checkSi.Name = "checkSi"
-        Me.checkSi.Size = New System.Drawing.Size(34, 17)
-        Me.checkSi.TabIndex = 12
-        Me.checkSi.TabStop = True
-        Me.checkSi.Text = "Si"
-        Me.checkSi.UseVisualStyleBackColor = True
-        '
-        'checkNo
-        '
-        Me.checkNo.AutoSize = True
-        Me.checkNo.Location = New System.Drawing.Point(93, 235)
-        Me.checkNo.Name = "checkNo"
-        Me.checkNo.Size = New System.Drawing.Size(39, 17)
-        Me.checkNo.TabIndex = 11
-        Me.checkNo.TabStop = True
-        Me.checkNo.Text = "No"
-        Me.checkNo.UseVisualStyleBackColor = True
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(19, 186)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(125, 13)
-        Me.Label9.TabIndex = 10
-        Me.Label9.Text = "Disponibilidad para Viajar"
-        '
         'Button1
         '
         Me.Button1.Location = New System.Drawing.Point(713, 397)
@@ -280,11 +281,21 @@ Partial Class Form2
         Me.Button1.Text = "Ver Datos"
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'btnRegresar
+        '
+        Me.btnRegresar.Location = New System.Drawing.Point(713, 58)
+        Me.btnRegresar.Name = "btnRegresar"
+        Me.btnRegresar.Size = New System.Drawing.Size(75, 23)
+        Me.btnRegresar.TabIndex = 4
+        Me.btnRegresar.Text = "Regresar"
+        Me.btnRegresar.UseVisualStyleBackColor = True
+        '
         'Form2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.btnRegresar)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.buttonEnviar)
         Me.Controls.Add(Me.GroupBox2)
@@ -323,4 +334,5 @@ Partial Class Form2
     Friend WithEvents checkNo As RadioButton
     Friend WithEvents Label9 As Label
     Friend WithEvents Button1 As Button
+    Friend WithEvents btnRegresar As Button
 End Class
