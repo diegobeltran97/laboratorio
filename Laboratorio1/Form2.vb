@@ -12,8 +12,8 @@
     Dim contAsSM As Integer = 0
     Dim contEdadHS As Integer = 0
     Dim contEdadMS As Integer = 0
-    Dim contEstaturaPHS As Integer = 0
-    Dim contEstaturaPMS As Integer = 0
+    Dim contEstaturaPHS As Double = 0
+    Dim contEstaturaPMS As Double = 0
     Dim contRechazos As Integer = 0
     Dim contRechazosH As Integer = 0
     Dim contRechazosM As Integer = 0
@@ -47,30 +47,38 @@
 
                     Form3.lblHSelected.Text = contAsSH
 
-                    Form3.lblPHSelected.Text = contAsSH * 100 / contAsSelected
+
 
 
                     contEdadHS = contEdadHS + edad
-                    Form3.lblEdadPHS.Text = contEdadHS / contAsSH
+
 
                     contEstaturaPHS = contEstaturaPHS + estatura
-                    Form3.lblEstaturaPHS.Text = contEstaturaPHS
+
 
                 End If
+                Form3.lblPHSelected.Text = contAsSH * 100 / contAsSelected
+                Form3.lblEdadPHS.Text = contEdadHS / contAsSH
+                Form3.lblEstaturaPHS.Text = contEstaturaPHS / contAsSH
 
                 If checkFemenino.Checked = True Then
                     contAsSM = contAsSM + 1
 
                     Form3.lblMSelected.Text = contAsSM
 
-                    Form3.lblPMSelected.Text = contAsSM * 100 / contAsSelected
+
 
                     contEdadMS = contEdadMS + edad
-                    Form3.lblEdadPMS.Text = contEdadMS / contAsSM
+
 
                     contEstaturaPMS = contEstaturaPMS + estatura
-                    Form3.lblEstaturaPMS.Text = contEstaturaPMS
+
+
+
                 End If
+                Form3.lblPMSelected.Text = contAsSM * 100 / contAsSelected
+                Form3.lblEdadPMS.Text = contEdadMS / contAsSM
+                Form3.lblEstaturaPMS.Text = contEstaturaPMS / contAsSM
 
             Else
                 If checkMasculino.Checked = True Then
@@ -91,6 +99,10 @@
 
                 Form3.lblPHRechazo.Text = contRechazosH * 100 / contRechazos
                 Form3.lblPMRechazo.Text = contRechazosM * 100 / contRechazos
+
+
+
+
             End If
 
             contAs = contAs + 1
