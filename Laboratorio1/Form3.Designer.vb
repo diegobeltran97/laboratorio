@@ -41,7 +41,7 @@ Partial Class Form3
         Me.lbl2 = New System.Windows.Forms.Label()
         Me.lblPMSelected = New System.Windows.Forms.Label()
         Me.lbl3 = New System.Windows.Forms.Label()
-        Me.lblHRechazo = New System.Windows.Forms.Label()
+        Me.lblRechazadosH = New System.Windows.Forms.Label()
         Me.lbl16 = New System.Windows.Forms.Label()
         Me.lblRechazados = New System.Windows.Forms.Label()
         Me.lbl15 = New System.Windows.Forms.Label()
@@ -57,7 +57,7 @@ Partial Class Form3
         Me.lbl10 = New System.Windows.Forms.Label()
         Me.lblEdadPHS = New System.Windows.Forms.Label()
         Me.lbl9 = New System.Windows.Forms.Label()
-        Me.lblMRechazo = New System.Windows.Forms.Label()
+        Me.lblRechazadosM = New System.Windows.Forms.Label()
         Me.lbl17 = New System.Windows.Forms.Label()
         Me.lbl19 = New System.Windows.Forms.Label()
         Me.lbl18 = New System.Windows.Forms.Label()
@@ -72,9 +72,9 @@ Partial Class Form3
         Me.GroupBox1.Controls.Add(Me.lblPHRechazo)
         Me.GroupBox1.Controls.Add(Me.lbl19)
         Me.GroupBox1.Controls.Add(Me.lbl18)
-        Me.GroupBox1.Controls.Add(Me.lblMRechazo)
+        Me.GroupBox1.Controls.Add(Me.lblRechazadosM)
         Me.GroupBox1.Controls.Add(Me.lbl17)
-        Me.GroupBox1.Controls.Add(Me.lblHRechazo)
+        Me.GroupBox1.Controls.Add(Me.lblRechazadosH)
         Me.GroupBox1.Controls.Add(Me.lbl16)
         Me.GroupBox1.Controls.Add(Me.lblRechazados)
         Me.GroupBox1.Controls.Add(Me.lbl15)
@@ -278,15 +278,15 @@ Partial Class Form3
         Me.lbl3.TabIndex = 14
         Me.lbl3.Text = "Porcentaje de Mujeres Aspirantes"
         '
-        'lblHRechazo
+        'lblRechazadosH
         '
-        Me.lblHRechazo.AutoSize = True
-        Me.lblHRechazo.Location = New System.Drawing.Point(559, 216)
-        Me.lblHRechazo.Name = "lblHRechazo"
-        Me.lblHRechazo.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.lblHRechazo.Size = New System.Drawing.Size(13, 13)
-        Me.lblHRechazo.TabIndex = 31
-        Me.lblHRechazo.Text = "0"
+        Me.lblRechazadosH.AutoSize = True
+        Me.lblRechazadosH.Location = New System.Drawing.Point(559, 216)
+        Me.lblRechazadosH.Name = "lblRechazadosH"
+        Me.lblRechazadosH.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.lblRechazadosH.Size = New System.Drawing.Size(13, 13)
+        Me.lblRechazadosH.TabIndex = 31
+        Me.lblRechazadosH.Text = "0"
         '
         'lbl16
         '
@@ -425,15 +425,15 @@ Partial Class Form3
         Me.lbl9.TabIndex = 16
         Me.lbl9.Text = "Edad Promedio de Hombres Seleccionados"
         '
-        'lblMRechazo
+        'lblRechazadosM
         '
-        Me.lblMRechazo.AutoSize = True
-        Me.lblMRechazo.Location = New System.Drawing.Point(559, 245)
-        Me.lblMRechazo.Name = "lblMRechazo"
-        Me.lblMRechazo.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.lblMRechazo.Size = New System.Drawing.Size(13, 13)
-        Me.lblMRechazo.TabIndex = 33
-        Me.lblMRechazo.Text = "0"
+        Me.lblRechazadosM.AutoSize = True
+        Me.lblRechazadosM.Location = New System.Drawing.Point(559, 245)
+        Me.lblRechazadosM.Name = "lblRechazadosM"
+        Me.lblRechazadosM.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.lblRechazadosM.Size = New System.Drawing.Size(13, 13)
+        Me.lblRechazadosM.TabIndex = 33
+        Me.lblRechazadosM.Text = "0"
         '
         'lbl17
         '
@@ -518,9 +518,9 @@ Partial Class Form3
     Friend WithEvents lblPHRechazo As Label
     Friend WithEvents lbl19 As Label
     Friend WithEvents lbl18 As Label
-    Friend WithEvents lblMRechazo As Label
+    Friend WithEvents lblRechazadosM As Label
     Friend WithEvents lbl17 As Label
-    Friend WithEvents lblHRechazo As Label
+    Friend WithEvents lblRechazadosH As Label
     Friend WithEvents lbl16 As Label
     Friend WithEvents lblRechazados As Label
     Friend WithEvents lbl15 As Label

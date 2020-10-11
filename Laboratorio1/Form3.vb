@@ -27,4 +27,8 @@
     Private Sub Label6_Click(sender As Object, e As EventArgs) Handles lblAsPM.Click
 
     End Sub
+
+    Private Sub lblAsSelected_Click(sender As Object, e As EventArgs) Handles lblAsSelected.Click
+
+    End Sub
 End Class
