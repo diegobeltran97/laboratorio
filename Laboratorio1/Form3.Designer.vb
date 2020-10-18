@@ -23,6 +23,10 @@ Partial Class Form3
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.label_estatura_nombre_bajo = New System.Windows.Forms.Label()
+        Me.label_estatura_nombre_alto = New System.Windows.Forms.Label()
+        Me.label_estatura_bajo = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.lblPMRechazo = New System.Windows.Forms.Label()
         Me.lblPHRechazo = New System.Windows.Forms.Label()
         Me.lbl19 = New System.Windows.Forms.Label()
@@ -33,9 +37,9 @@ Partial Class Form3
         Me.lbl16 = New System.Windows.Forms.Label()
         Me.lblRechazados = New System.Windows.Forms.Label()
         Me.lbl15 = New System.Windows.Forms.Label()
-        Me.LML1 = New System.Windows.Forms.Label()
+        Me.label_estatura_alta = New System.Windows.Forms.Label()
         Me.label_estatura_alto = New System.Windows.Forms.Label()
-        Me.lbl14 = New System.Windows.Forms.Label()
+        Me.llbl14 = New System.Windows.Forms.Label()
         Me.lbl13 = New System.Windows.Forms.Label()
         Me.lblEstaturaPMS = New System.Windows.Forms.Label()
         Me.lblEstaturaPHS = New System.Windows.Forms.Label()
@@ -63,15 +67,20 @@ Partial Class Form3
         Me.lbl1 = New System.Windows.Forms.Label()
         Me.btnTerminar = New System.Windows.Forms.Button()
         Me.btnRegresar = New System.Windows.Forms.Button()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.label_estatura_bajo = New System.Windows.Forms.Label()
-        Me.label_estatura_nombre_alto = New System.Windows.Forms.Label()
-        Me.label_estatura_nombre_bajo = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.label_estatura_nombre_alta = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.label_estatura_nombre_baja = New System.Windows.Forms.Label()
+        Me.label_estatura_baja = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.label_estatura_baja)
+        Me.GroupBox1.Controls.Add(Me.label_estatura_nombre_baja)
+        Me.GroupBox1.Controls.Add(Me.Label3)
+        Me.GroupBox1.Controls.Add(Me.label_estatura_nombre_alta)
         Me.GroupBox1.Controls.Add(Me.label_estatura_nombre_bajo)
         Me.GroupBox1.Controls.Add(Me.label_estatura_nombre_alto)
         Me.GroupBox1.Controls.Add(Me.label_estatura_bajo)
@@ -86,9 +95,9 @@ Partial Class Form3
         Me.GroupBox1.Controls.Add(Me.lbl16)
         Me.GroupBox1.Controls.Add(Me.lblRechazados)
         Me.GroupBox1.Controls.Add(Me.lbl15)
-        Me.GroupBox1.Controls.Add(Me.LML1)
+        Me.GroupBox1.Controls.Add(Me.label_estatura_alta)
         Me.GroupBox1.Controls.Add(Me.label_estatura_alto)
-        Me.GroupBox1.Controls.Add(Me.lbl14)
+        Me.GroupBox1.Controls.Add(Me.llbl14)
         Me.GroupBox1.Controls.Add(Me.lbl13)
         Me.GroupBox1.Controls.Add(Me.lblEstaturaPMS)
         Me.GroupBox1.Controls.Add(Me.lblEstaturaPHS)
@@ -116,15 +125,52 @@ Partial Class Form3
         Me.GroupBox1.Controls.Add(Me.lbl1)
         Me.GroupBox1.Location = New System.Drawing.Point(35, 28)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(589, 410)
+        Me.GroupBox1.Size = New System.Drawing.Size(620, 513)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Informe"
         '
+        'label_estatura_nombre_bajo
+        '
+        Me.label_estatura_nombre_bajo.AutoSize = True
+        Me.label_estatura_nombre_bajo.Location = New System.Drawing.Point(366, 148)
+        Me.label_estatura_nombre_bajo.Name = "label_estatura_nombre_bajo"
+        Me.label_estatura_nombre_bajo.Size = New System.Drawing.Size(44, 13)
+        Me.label_estatura_nombre_bajo.TabIndex = 41
+        Me.label_estatura_nombre_bajo.Text = "Nombre"
+        '
+        'label_estatura_nombre_alto
+        '
+        Me.label_estatura_nombre_alto.AutoSize = True
+        Me.label_estatura_nombre_alto.Location = New System.Drawing.Point(366, 93)
+        Me.label_estatura_nombre_alto.Name = "label_estatura_nombre_alto"
+        Me.label_estatura_nombre_alto.Size = New System.Drawing.Size(44, 13)
+        Me.label_estatura_nombre_alto.TabIndex = 40
+        Me.label_estatura_nombre_alto.Text = "Nombre"
+        '
+        'label_estatura_bajo
+        '
+        Me.label_estatura_bajo.AutoSize = True
+        Me.label_estatura_bajo.Location = New System.Drawing.Point(503, 148)
+        Me.label_estatura_bajo.Name = "label_estatura_bajo"
+        Me.label_estatura_bajo.Size = New System.Drawing.Size(13, 13)
+        Me.label_estatura_bajo.TabIndex = 39
+        Me.label_estatura_bajo.Text = "0"
+        Me.label_estatura_bajo.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(324, 123)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(92, 13)
+        Me.Label1.TabIndex = 38
+        Me.Label1.Text = "Hombre mas  bajo"
+        '
         'lblPMRechazo
         '
         Me.lblPMRechazo.AutoSize = True
-        Me.lblPMRechazo.Location = New System.Drawing.Point(559, 382)
+        Me.lblPMRechazo.Location = New System.Drawing.Point(558, 415)
         Me.lblPMRechazo.Name = "lblPMRechazo"
         Me.lblPMRechazo.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.lblPMRechazo.Size = New System.Drawing.Size(13, 13)
@@ -134,7 +180,7 @@ Partial Class Form3
         'lblPHRechazo
         '
         Me.lblPHRechazo.AutoSize = True
-        Me.lblPHRechazo.Location = New System.Drawing.Point(559, 354)
+        Me.lblPHRechazo.Location = New System.Drawing.Point(558, 387)
         Me.lblPHRechazo.Name = "lblPHRechazo"
         Me.lblPHRechazo.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.lblPHRechazo.Size = New System.Drawing.Size(13, 13)
@@ -144,7 +190,7 @@ Partial Class Form3
         'lbl19
         '
         Me.lbl19.AutoSize = True
-        Me.lbl19.Location = New System.Drawing.Point(328, 382)
+        Me.lbl19.Location = New System.Drawing.Point(327, 415)
         Me.lbl19.Name = "lbl19"
         Me.lbl19.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.lbl19.Size = New System.Drawing.Size(176, 13)
@@ -154,7 +200,7 @@ Partial Class Form3
         'lbl18
         '
         Me.lbl18.AutoSize = True
-        Me.lbl18.Location = New System.Drawing.Point(325, 354)
+        Me.lbl18.Location = New System.Drawing.Point(324, 387)
         Me.lbl18.Name = "lbl18"
         Me.lbl18.Size = New System.Drawing.Size(181, 13)
         Me.lbl18.TabIndex = 34
@@ -163,7 +209,7 @@ Partial Class Form3
         'lblRechazadosM
         '
         Me.lblRechazadosM.AutoSize = True
-        Me.lblRechazadosM.Location = New System.Drawing.Point(559, 326)
+        Me.lblRechazadosM.Location = New System.Drawing.Point(558, 359)
         Me.lblRechazadosM.Name = "lblRechazadosM"
         Me.lblRechazadosM.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.lblRechazadosM.Size = New System.Drawing.Size(13, 13)
@@ -173,7 +219,7 @@ Partial Class Form3
         'lbl17
         '
         Me.lbl17.AutoSize = True
-        Me.lbl17.Location = New System.Drawing.Point(325, 326)
+        Me.lbl17.Location = New System.Drawing.Point(324, 359)
         Me.lbl17.Name = "lbl17"
         Me.lbl17.Size = New System.Drawing.Size(107, 13)
         Me.lbl17.TabIndex = 32
@@ -182,7 +228,7 @@ Partial Class Form3
         'lblRechazadosH
         '
         Me.lblRechazadosH.AutoSize = True
-        Me.lblRechazadosH.Location = New System.Drawing.Point(559, 297)
+        Me.lblRechazadosH.Location = New System.Drawing.Point(558, 330)
         Me.lblRechazadosH.Name = "lblRechazadosH"
         Me.lblRechazadosH.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.lblRechazadosH.Size = New System.Drawing.Size(13, 13)
@@ -192,7 +238,7 @@ Partial Class Form3
         'lbl16
         '
         Me.lbl16.AutoSize = True
-        Me.lbl16.Location = New System.Drawing.Point(325, 297)
+        Me.lbl16.Location = New System.Drawing.Point(324, 330)
         Me.lbl16.Name = "lbl16"
         Me.lbl16.Size = New System.Drawing.Size(112, 13)
         Me.lbl16.TabIndex = 30
@@ -201,7 +247,7 @@ Partial Class Form3
         'lblRechazados
         '
         Me.lblRechazados.AutoSize = True
-        Me.lblRechazados.Location = New System.Drawing.Point(559, 269)
+        Me.lblRechazados.Location = New System.Drawing.Point(558, 302)
         Me.lblRechazados.Name = "lblRechazados"
         Me.lblRechazados.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.lblRechazados.Size = New System.Drawing.Size(13, 13)
@@ -211,44 +257,44 @@ Partial Class Form3
         'lbl15
         '
         Me.lbl15.AutoSize = True
-        Me.lbl15.Location = New System.Drawing.Point(325, 269)
+        Me.lbl15.Location = New System.Drawing.Point(324, 302)
         Me.lbl15.Name = "lbl15"
         Me.lbl15.Size = New System.Drawing.Size(114, 13)
         Me.lbl15.TabIndex = 28
         Me.lbl15.Text = "Total de Rechazad@s"
         '
-        'LML1
+        'label_estatura_alta
         '
-        Me.LML1.AutoSize = True
-        Me.LML1.Location = New System.Drawing.Point(559, 230)
-        Me.LML1.Name = "LML1"
-        Me.LML1.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.LML1.Size = New System.Drawing.Size(13, 13)
-        Me.LML1.TabIndex = 27
-        Me.LML1.Text = "0"
+        Me.label_estatura_alta.AutoSize = True
+        Me.label_estatura_alta.Location = New System.Drawing.Point(506, 200)
+        Me.label_estatura_alta.Name = "label_estatura_alta"
+        Me.label_estatura_alta.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.label_estatura_alta.Size = New System.Drawing.Size(13, 13)
+        Me.label_estatura_alta.TabIndex = 27
+        Me.label_estatura_alta.Text = "0"
         '
         'label_estatura_alto
         '
         Me.label_estatura_alto.AutoSize = True
-        Me.label_estatura_alto.Location = New System.Drawing.Point(504, 147)
+        Me.label_estatura_alto.Location = New System.Drawing.Point(503, 93)
         Me.label_estatura_alto.Name = "label_estatura_alto"
         Me.label_estatura_alto.Size = New System.Drawing.Size(13, 13)
         Me.label_estatura_alto.TabIndex = 26
         Me.label_estatura_alto.Text = "0"
         '
-        'lbl14
+        'llbl14
         '
-        Me.lbl14.AutoSize = True
-        Me.lbl14.Location = New System.Drawing.Point(325, 230)
-        Me.lbl14.Name = "lbl14"
-        Me.lbl14.Size = New System.Drawing.Size(130, 13)
-        Me.lbl14.TabIndex = 25
-        Me.lbl14.Text = "Mujer mas alto y bajo******"
+        Me.llbl14.AutoSize = True
+        Me.llbl14.Location = New System.Drawing.Point(324, 172)
+        Me.llbl14.Name = "llbl14"
+        Me.llbl14.Size = New System.Drawing.Size(75, 13)
+        Me.llbl14.TabIndex = 25
+        Me.llbl14.Text = "Mujer mas alta"
         '
         'lbl13
         '
         Me.lbl13.AutoSize = True
-        Me.lbl13.Location = New System.Drawing.Point(325, 130)
+        Me.lbl13.Location = New System.Drawing.Point(324, 73)
         Me.lbl13.Name = "lbl13"
         Me.lbl13.Size = New System.Drawing.Size(86, 13)
         Me.lbl13.TabIndex = 24
@@ -257,7 +303,7 @@ Partial Class Form3
         'lblEstaturaPMS
         '
         Me.lblEstaturaPMS.AutoSize = True
-        Me.lblEstaturaPMS.Location = New System.Drawing.Point(556, 95)
+        Me.lblEstaturaPMS.Location = New System.Drawing.Point(555, 38)
         Me.lblEstaturaPMS.Name = "lblEstaturaPMS"
         Me.lblEstaturaPMS.Size = New System.Drawing.Size(13, 13)
         Me.lblEstaturaPMS.TabIndex = 23
@@ -266,7 +312,7 @@ Partial Class Form3
         'lblEstaturaPHS
         '
         Me.lblEstaturaPHS.AutoSize = True
-        Me.lblEstaturaPHS.Location = New System.Drawing.Point(556, 64)
+        Me.lblEstaturaPHS.Location = New System.Drawing.Point(255, 328)
         Me.lblEstaturaPHS.Name = "lblEstaturaPHS"
         Me.lblEstaturaPHS.Size = New System.Drawing.Size(13, 13)
         Me.lblEstaturaPHS.TabIndex = 22
@@ -275,7 +321,7 @@ Partial Class Form3
         'lbl12
         '
         Me.lbl12.AutoSize = True
-        Me.lbl12.Location = New System.Drawing.Point(325, 95)
+        Me.lbl12.Location = New System.Drawing.Point(324, 38)
         Me.lbl12.Name = "lbl12"
         Me.lbl12.Size = New System.Drawing.Size(221, 13)
         Me.lbl12.TabIndex = 21
@@ -284,7 +330,7 @@ Partial Class Form3
         'lbl11
         '
         Me.lbl11.AutoSize = True
-        Me.lbl11.Location = New System.Drawing.Point(325, 64)
+        Me.lbl11.Location = New System.Drawing.Point(24, 328)
         Me.lbl11.Name = "lbl11"
         Me.lbl11.Size = New System.Drawing.Size(226, 13)
         Me.lbl11.TabIndex = 20
@@ -293,7 +339,7 @@ Partial Class Form3
         'lblEdadPMS
         '
         Me.lblEdadPMS.AutoSize = True
-        Me.lblEdadPMS.Location = New System.Drawing.Point(556, 36)
+        Me.lblEdadPMS.Location = New System.Drawing.Point(255, 300)
         Me.lblEdadPMS.Name = "lblEdadPMS"
         Me.lblEdadPMS.Size = New System.Drawing.Size(13, 13)
         Me.lblEdadPMS.TabIndex = 19
@@ -302,7 +348,7 @@ Partial Class Form3
         'lbl10
         '
         Me.lbl10.AutoSize = True
-        Me.lbl10.Location = New System.Drawing.Point(325, 36)
+        Me.lbl10.Location = New System.Drawing.Point(24, 300)
         Me.lbl10.Name = "lbl10"
         Me.lbl10.Size = New System.Drawing.Size(207, 13)
         Me.lbl10.TabIndex = 18
@@ -491,47 +537,58 @@ Partial Class Form3
         Me.btnRegresar.Text = "Regresar"
         Me.btnRegresar.UseVisualStyleBackColor = True
         '
-        'Label1
+        'Button1
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(325, 169)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(92, 13)
-        Me.Label1.TabIndex = 38
-        Me.Label1.Text = "Hombre mas  bajo"
+        Me.Button1.Location = New System.Drawing.Point(676, 141)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 3
+        Me.Button1.Text = "Usuarios"
+        Me.Button1.UseVisualStyleBackColor = True
         '
-        'label_estatura_bajo
+        'label_estatura_nombre_alta
         '
-        Me.label_estatura_bajo.AutoSize = True
-        Me.label_estatura_bajo.Location = New System.Drawing.Point(504, 187)
-        Me.label_estatura_bajo.Name = "label_estatura_bajo"
-        Me.label_estatura_bajo.Size = New System.Drawing.Size(13, 13)
-        Me.label_estatura_bajo.TabIndex = 39
-        Me.label_estatura_bajo.Text = "0"
+        Me.label_estatura_nombre_alta.AutoSize = True
+        Me.label_estatura_nombre_alta.Location = New System.Drawing.Point(366, 200)
+        Me.label_estatura_nombre_alta.Name = "label_estatura_nombre_alta"
+        Me.label_estatura_nombre_alta.Size = New System.Drawing.Size(44, 13)
+        Me.label_estatura_nombre_alta.TabIndex = 42
+        Me.label_estatura_nombre_alta.Text = "Nombre"
         '
-        'label_estatura_nombre_alto
+        'Label3
         '
-        Me.label_estatura_nombre_alto.AutoSize = True
-        Me.label_estatura_nombre_alto.Location = New System.Drawing.Point(367, 147)
-        Me.label_estatura_nombre_alto.Name = "label_estatura_nombre_alto"
-        Me.label_estatura_nombre_alto.Size = New System.Drawing.Size(44, 13)
-        Me.label_estatura_nombre_alto.TabIndex = 40
-        Me.label_estatura_nombre_alto.Text = "Nombre"
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(324, 228)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(78, 13)
+        Me.Label3.TabIndex = 43
+        Me.Label3.Text = "Mujer mas baja"
         '
-        'label_estatura_nombre_bajo
+        'label_estatura_nombre_baja
         '
-        Me.label_estatura_nombre_bajo.AutoSize = True
-        Me.label_estatura_nombre_bajo.Location = New System.Drawing.Point(367, 187)
-        Me.label_estatura_nombre_bajo.Name = "label_estatura_nombre_bajo"
-        Me.label_estatura_nombre_bajo.Size = New System.Drawing.Size(44, 13)
-        Me.label_estatura_nombre_bajo.TabIndex = 41
-        Me.label_estatura_nombre_bajo.Text = "Nombre"
+        Me.label_estatura_nombre_baja.AutoSize = True
+        Me.label_estatura_nombre_baja.Location = New System.Drawing.Point(366, 255)
+        Me.label_estatura_nombre_baja.Name = "label_estatura_nombre_baja"
+        Me.label_estatura_nombre_baja.Size = New System.Drawing.Size(44, 13)
+        Me.label_estatura_nombre_baja.TabIndex = 44
+        Me.label_estatura_nombre_baja.Text = "Nombre"
+        '
+        'label_estatura_baja
+        '
+        Me.label_estatura_baja.AutoSize = True
+        Me.label_estatura_baja.Location = New System.Drawing.Point(506, 255)
+        Me.label_estatura_baja.Name = "label_estatura_baja"
+        Me.label_estatura_baja.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.label_estatura_baja.Size = New System.Drawing.Size(13, 13)
+        Me.label_estatura_baja.TabIndex = 45
+        Me.label_estatura_baja.Text = "0"
         '
         'Form3
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(800, 565)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.btnRegresar)
         Me.Controls.Add(Me.btnTerminar)
         Me.Controls.Add(Me.GroupBox1)
@@ -568,9 +625,9 @@ Partial Class Form3
     Friend WithEvents lbl16 As Label
     Friend WithEvents lblRechazados As Label
     Friend WithEvents lbl15 As Label
-    Friend WithEvents LML1 As Label
+    Friend WithEvents label_estatura_alta As Label
     Friend WithEvents label_estatura_alto As Label
-    Friend WithEvents lbl14 As Label
+    Friend WithEvents llbl14 As Label
     Friend WithEvents lbl13 As Label
     Friend WithEvents lblEstaturaPMS As Label
     Friend WithEvents lblEstaturaPHS As Label
@@ -588,4 +645,9 @@ Partial Class Form3
     Friend WithEvents label_estatura_nombre_bajo As Label
     Friend WithEvents label_estatura_nombre_alto As Label
     Friend WithEvents label_estatura_bajo As Label
+    Friend WithEvents Button1 As Button
+    Friend WithEvents label_estatura_baja As Label
+    Friend WithEvents label_estatura_nombre_baja As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents label_estatura_nombre_alta As Label
 End Class

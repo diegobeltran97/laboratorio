@@ -4,6 +4,8 @@
     Dim edad
     Dim estatura
     Dim peso
+    Dim nombre_usuario
+
     Dim contAs As Integer = 0
     Dim contAsH As Integer = 0
     Dim contAsM As Integer = 0
@@ -34,6 +36,8 @@
             edad = Integer.Parse(inputEdad.Text)
             estatura = Double.Parse(inputEstatura.Text)
             peso = Double.Parse(inputPeso.Text)
+            nombre_usuario = inputNombre.Text
+
 
 
             If verificar() Then
@@ -77,27 +81,74 @@
 
                 End If
 
-                If estatura > Double.Parse(Form3.label_estatura_alto.Text) Then
-                    Form3.label_estatura_alto.Text = estatura
-                    Form3.label_estatura_nombre_alto.Text = inputNombre.Text
 
-                End If
+                'Verificar estatura mayor y menor de los usuarios
 
 
+                If checkMasculino.Checked Then
+                    If estatura > Double.Parse(Form3.label_estatura_alto.Text) Then
 
-                If estatura < Double.Parse(Form3.label_estatura_bajo.Text) Then
-                    Form3.label_estatura_nombre_bajo.Text = estatura
-                    Form3.label_estatura_nombre_bajo.Text = inputNombre.Text
+
+                        If Form3.label_estatura_alto.Text < Form3.label_estatura_bajo.Text Or Form3.label_estatura_bajo.Text = 0 Then
+                            Form3.label_estatura_bajo.Text = Form3.label_estatura_alto.Text
+                            Form3.label_estatura_nombre_bajo.Text = Form3.label_estatura_nombre_alto.Text
+                        End If
+
+
+                        Form3.label_estatura_alto.Text = estatura
+                        Form3.label_estatura_nombre_alto.Text = inputNombre.Text
+
+
+                    End If
+
+                    If estatura < Double.Parse(Form3.label_estatura_alto.Text) Then
+
+
+
+                        Form3.label_estatura_bajo.Text = estatura
+                        Form3.label_estatura_nombre_bajo.Text = inputNombre.Text
+
+                    End If
+                Else
+
+                    If estatura > Double.Parse(Form3.label_estatura_alta.Text) Then
+
+
+                        If Form3.label_estatura_alta.Text < Form3.label_estatura_baja.Text Or Form3.label_estatura_baja.Text = 0 Then
+                            Form3.label_estatura_baja.Text = Form3.label_estatura_alta.Text
+                            Form3.label_estatura_nombre_baja.Text = Form3.label_estatura_nombre_alta.Text
+                        End If
+
+
+                        Form3.label_estatura_alta.Text = estatura
+                        Form3.label_estatura_nombre_alta.Text = inputNombre.Text
+
+
+                    End If
+
+                    If estatura < Double.Parse(Form3.label_estatura_alta.Text) Then
+
+
+
+                        Form3.label_estatura_baja.Text = estatura
+                        Form3.label_estatura_nombre_baja.Text = inputNombre.Text
+
+                    End If
 
                 End If
 
 
                 Form3.lblPMSelected.Text = contAsSM * 100 / contAsSelected
-                Form3.lblEdadPMS.Text = contEdadMS / contAsSM
-                Form3.lblEstaturaPMS.Text = contEstaturaPMS / contAsSM
+                    Form3.lblEdadPMS.Text = contEdadMS / contAsSM
+                    Form3.lblEstaturaPMS.Text = contEstaturaPMS / contAsSM
+
+                'Agregar el nombre  de las personas aceptadas'
+                Form4.listBoxIngresados.Items.Add(nombre_usuario & "    " & inputCedula.Text)
+
+
 
             Else
-                If checkMasculino.Checked = True Then
+                    If checkMasculino.Checked = True Then
                     contRechazosH = contRechazosH + 1
                 End If
 
