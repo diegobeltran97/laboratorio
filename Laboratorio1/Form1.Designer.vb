@@ -126,11 +126,11 @@ Partial Class Form1
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(453, 355)
+        Me.Label7.Location = New System.Drawing.Point(453, 345)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(65, 24)
+        Me.Label7.Size = New System.Drawing.Size(266, 24)
         Me.Label7.TabIndex = 8
-        Me.Label7.Text = "Diego"
+        Me.Label7.Text = "Diego Sastoque 20-14-3061"
         '
         'Label8
         '

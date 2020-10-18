@@ -76,6 +76,22 @@
 
 
                 End If
+
+                If estatura > Double.Parse(Form3.label_estatura_alto.Text) Then
+                    Form3.label_estatura_alto.Text = estatura
+                    Form3.label_estatura_nombre_alto.Text = inputNombre.Text
+
+                End If
+
+
+
+                If estatura < Double.Parse(Form3.label_estatura_bajo.Text) Then
+                    Form3.label_estatura_nombre_bajo.Text = estatura
+                    Form3.label_estatura_nombre_bajo.Text = inputNombre.Text
+
+                End If
+
+
                 Form3.lblPMSelected.Text = contAsSM * 100 / contAsSelected
                 Form3.lblEdadPMS.Text = contEdadMS / contAsSM
                 Form3.lblEstaturaPMS.Text = contEstaturaPMS / contAsSM
@@ -104,6 +120,8 @@
 
 
             End If
+
+
 
             contAs = contAs + 1
             Form3.t_usuarios.Text = contAs
